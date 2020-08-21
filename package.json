@@ -6,14 +6,18 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "autoprefixer": "^9.8.6",
+    "dom-to-image": "^2.6.0",
+    "postcss": "^7.0.32",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "tailwindcss": "^1.7.3"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "NODE_ENV=production npm run build:css && react-scripts build",
+    "build:css": "postcss tailwind.css -o src/index.css",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
