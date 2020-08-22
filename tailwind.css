@@ -13,3 +13,15 @@ body {
 .card {
   @apply bg-white rounded-lg shadow-md; 
 }
+
+.text-input {
+  @apply w-full bg-white p-2 rounded-md border-2 border-gray-400;
+}
+
+.control-well {
+  @apply bg-gray-100 p-2 rounded-lg;
+}
+
+.control-title {
+  @apply text-gray-700 text-lg text-center mb-2 font-bold;
+}

@@ -18667,6 +18667,37 @@ body {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
+.text-input {
+  width: 100%;
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border-width: 2px;
+  --border-opacity: 1;
+  border-color: #cbd5e0;
+  border-color: rgba(203, 213, 224, var(--border-opacity));
+}
+
+.control-well {
+  --bg-opacity: 1;
+  background-color: #f7fafc;
+  background-color: rgba(247, 250, 252, var(--bg-opacity));
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.control-title {
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+  font-size: 1.125rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

@@ -1,4 +1,6 @@
 import React from 'react';
+import Render from '../render/Render';
+import ControlsContainer from '../controls/ControlsContainer';
 
 const PreviewContainer = () => {
 
@@ -6,9 +8,10 @@ const PreviewContainer = () => {
     <section>
       <h1 className="section-header">Caption Preview</h1>
       <div className="card p-5 mb-8">
-      {/* TODO Add Preview render container and controls container */}
-        {/* <RenderContainer />
-        <ControlsContainer /> */}
+      <div className="shadow-md inline-block">
+        <Render isPreview={true}/>
+      </div>
+      <ControlsContainer/>
       </div>
     </section>
   )
