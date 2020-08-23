@@ -18644,10 +18644,45 @@ video {
   animation: bounce 1s infinite;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Roboto:wght@400;700&display=swap');
+
+*:focus {
+  outline: none;
+}
+
 body {
   --bg-opacity: 1;
   background-color: #f7fafc;
   background-color: rgba(247, 250, 252, var(--bg-opacity));
+  font-family: 'Roboto', sans-serif;
+}
+
+ol>li, ul>li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  --bg-opacity: 1;
+  background-color: #f7fafc;
+  background-color: rgba(247, 250, 252, var(--bg-opacity));
+}
+
+#loading-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .section-header {
@@ -18667,6 +18702,12 @@ body {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
+.dark-card {
+  --bg-opacity: 1;
+  background-color: #2d3748;
+  background-color: rgba(45, 55, 72, var(--bg-opacity));
+}
+
 .text-input {
   width: 100%;
   --bg-opacity: 1;
@@ -18678,13 +18719,16 @@ body {
   --border-opacity: 1;
   border-color: #cbd5e0;
   border-color: rgba(203, 213, 224, var(--border-opacity));
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 150ms;
 }
 
 .control-well {
   --bg-opacity: 1;
-  background-color: #f7fafc;
-  background-color: rgba(247, 250, 252, var(--bg-opacity));
+  background-color: #edf2f7;
+  background-color: rgba(237, 242, 247, var(--bg-opacity));
   padding: 0.5rem;
+  margin-top: 1.5rem;
   border-radius: 0.5rem;
 }
 
@@ -18696,6 +18740,92 @@ body {
   text-align: center;
   margin-bottom: 0.5rem;
   font-weight: 700;
+}
+
+.file-upload {
+  display: block;
+  border-style: dashed;
+  border-width: 2px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  --border-opacity: 1;
+  border-color: #cbd5e0;
+  border-color: rgba(203, 213, 224, var(--border-opacity));
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #718096;
+  color: rgba(113, 128, 150, var(--text-opacity));
+  border-radius: 0.375rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-weight: 700;
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 150ms;
+}
+
+label.file-upload-over {
+  --bg-opacity: 1;
+  background-color: #c6f6d5;
+  background-color: rgba(198, 246, 213, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #4299e1;
+  border-color: rgba(66, 153, 225, var(--border-opacity));
+}
+
+.btn {
+  display: block;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 200ms;
+  font-weight: 700;
+}
+
+.appearance-btn {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  padding: 0.5rem;
+  outline: 0;
+  flex-grow: 1;
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 200ms;
+}
+
+button.appearance-btn-on {
+  --bg-opacity: 1;
+  background-color: #4a5568;
+  background-color: rgba(74, 85, 104, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.gold {
+  background: linear-gradient(45deg, #4caffe 50%, #14e1fe 100%);
+}
+
+.stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    #4a5568,
+    #2d3748 50px,
+    #2d3748 50px,
+    #4a5568 100px
+  );
 }
 
 @media (min-width: 640px) {
