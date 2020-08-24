@@ -4,6 +4,8 @@ import placeholder from  '../../assets/placeholder.png';
 
 const Render = ({ isPreview }) => {
 
+  // TODO Make preview sticky and collapsible on mobile
+
   const { state, ACTIONS, dispatch } = useContext(SettingsContext);
 
   const imageRef = createRef();
@@ -33,6 +35,7 @@ const Render = ({ isPreview }) => {
           style={{
             whiteSpace: 'pre-line',
             justifyContent: state.alignment,
+            textAlign: state.alignment,
             fontWeight: (state.bold) ? 'bold' : 'normal',
             fontStyle: (state.italic) ? 'italic' : 'normal',
             textDecoration: (state.underline) ? 'underline' : 'initial',

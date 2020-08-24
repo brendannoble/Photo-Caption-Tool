@@ -18644,9 +18644,7 @@ video {
   animation: bounce 1s infinite;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&text=Photo%20Caption%20Tool&family=Roboto:wght@400;700&display=swap');
 
 *:focus {
   outline: none;
@@ -18816,16 +18814,6 @@ button.appearance-btn-on {
 
 .gold {
   background: linear-gradient(45deg, #4caffe 50%, #14e1fe 100%);
-}
-
-.stripes {
-  background: repeating-linear-gradient(
-    45deg,
-    #4a5568,
-    #2d3748 50px,
-    #2d3748 50px,
-    #4a5568 100px
-  );
 }
 
 @media (min-width: 640px) {

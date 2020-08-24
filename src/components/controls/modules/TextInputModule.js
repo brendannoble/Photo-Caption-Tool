@@ -11,8 +11,6 @@ const TextInputModule = () => {
     return;
   }
 
-  // TODO Fix multiline centering issue
-
   return (
     <div className="w-full md:mx-3 control-well">
       <h2 className="control-title">
