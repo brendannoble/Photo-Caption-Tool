@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import HelpSection from '../help/HelpSection';
+import React from 'react';
 
 const Header = () => {
   return (
@@ -29,7 +28,7 @@ const Header = () => {
     </nav>
     <div className="bg-gray-300">
       <div className="container mx-auto py-4 px-10 md:px-0 text-gray-800 text-sm md:text-lg font-bold text-center">
-        The quick and easy caption tool for desktop and mobile <i class="fas fa-desktop mx-1"></i> <i class="fas fa-mobile-alt mx-1"></i>
+        The quick and easy caption tool for desktop and mobile <i className="fas fa-desktop mx-1"></i> <i className="fas fa-mobile-alt mx-1"></i>
       </div>
     </div>
     </>
