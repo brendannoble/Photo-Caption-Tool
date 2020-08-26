@@ -32,10 +32,10 @@ const RenderController = () => {
       browser = ua[1].toLowerCase();
     }
 
-    if (browser === 'safari') {
+    if (browser !== 'safari') {
       domtoimage.toJpeg(document.querySelector('#render')).then((dataUrl) => {
-        dispatch({ type: ACTIONS.SET_FINALIMAGEURL, payload: dataUrl});
-        dispatch({ type: ACTIONS.TOGGLE_ISRENDERING});
+        dispatch({ type: ACTIONS.SET_FINALIMAGEURL, payload: dataUrl });
+        dispatch({ type: ACTIONS.TOGGLE_ISRENDERING });
         // TODO Implement better scrolling
         window.location = "#image-output";
       }).catch(err => {
