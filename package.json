@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "NODE_ENV=production npm run build:css && react-scripts build",
+    "build": "NODE_ENV=production GENERATE_SOURCEMAP=false npm run build:css && react-scripts build",
     "build:css": "postcss tailwind.css -o src/index.css",
     "postcss": "./node_modules/postcss/lib/postcss.js",
     "eject": "react-scripts eject"
@@ -38,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "postcss-cli": "^7.1.1"
   }
 }
