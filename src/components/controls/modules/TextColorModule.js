@@ -50,7 +50,7 @@ const TextColorModule = () => {
               APPLY
             </button>
           </div>
-          <ColorHistoryModule currentColor={state.textColor} applyColor={applyColor} storageKey={"textColor"}/>
+          <ColorHistoryModule currentColor={state.textColor} applyColor={applyColor} storageKey={"textColorHistory"}/>
         </div>
     </div>
   )

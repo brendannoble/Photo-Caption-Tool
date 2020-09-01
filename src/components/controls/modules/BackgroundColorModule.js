@@ -50,7 +50,7 @@ const BackgroundColorModule = () => {
             APPLY
           </button>
         </div>
-        <ColorHistoryModule currentColor={state.backgroundColor} applyColor={applyColor} storageKey={"cardColor"} />
+        <ColorHistoryModule currentColor={state.backgroundColor} applyColor={applyColor} storageKey={"cardColorHistory"} />
       </div>
     </div>
   )

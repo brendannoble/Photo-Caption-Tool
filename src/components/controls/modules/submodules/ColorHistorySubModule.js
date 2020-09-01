@@ -46,9 +46,9 @@ const ColorHistoryModule = ({ currentColor, applyColor, storageKey }) => {
   }, [currentColor, colors, storageKey])
 
   return (
-    <div className="flex flex-row md:w-6 w-full md:flex-col border-2 border-white mt-4 md:mt-0 shadow-lg rounded-lg overflow-hidden">
+    <div className="flex flex-row md:w-6 w-full md:flex-col border-2 border-gray-400 mt-4 md:mt-0 rounded-lg overflow-hidden">
       { colors.map((color, index) => (
-        <div key={uuidv4()} className={`${ index !== 4 ? 'border-r-2 md:border-b-2' : null} h-10 md:h-auto md:w-10 flex-grow border-white cursor-pointer`}
+        <div key={uuidv4()} className={`${ index !== 4 ? 'border-r-2 md:border-b-2' : null} h-10 md:h-auto md:w-10 flex-grow border-gray-400 cursor-pointer`}
           style={{ backgroundColor: color }}
           onClick={() => changeColor(color)}
         >

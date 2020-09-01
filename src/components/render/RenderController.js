@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import domtoimage from 'dom-to-image';
 import FileSaver, { saveAs } from 'file-saver';
 import PreviewContainer from '../preview/PreviewContainer';
@@ -7,15 +7,17 @@ import RenderButton from './RenderButton';
 import { SettingsContext } from '../../contexts/SettingsContext';
 import Render from './Render';
 import Overlay from '../util/Overlay';
+import Modal from 'react-responsive-modal';
+import 'react-responsive-modal/styles.css';
 
 const RenderController = () => {
 
   const { state, ACTIONS, dispatch } = useContext(SettingsContext);
+  const [ modalOpen, setModalOpen ] = useState(false);
 
   const startRender = () => {
     if (!state.fileSelected) {
-      alert('Please select a photo');
-      // TODO Add stylized alert
+      openModal();
       return;
     };
     if (state.isRendering) return;
@@ -63,6 +65,14 @@ const RenderController = () => {
     }
   }
 
+  const openModal = () => {
+    setModalOpen(true);
+  }
+
+  const closeModal = () => {
+    setModalOpen(false);
+  }
+
   return (
     <>
       <PreviewContainer/>
@@ -77,6 +87,10 @@ const RenderController = () => {
         <Render isPreview={false}/>
       </div>
       { (state.isRendering) ? <Overlay/> : null }
+      <Modal open={modalOpen} onClose={closeModal} classNames={{ modal: 'modal' }} center>
+        <h2 className="text-2xl text-gray-800 text-center font-bold m-6"><i className="fas fa-image mr-2"></i> Please select a photo first</h2>
+        <button className="btn w-full bg-blue-500 hover:bg-blue-400" onClick={() => closeModal()}>OK</button>
+      </Modal>
     </>
   )
 }

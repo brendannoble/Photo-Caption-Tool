@@ -18816,6 +18816,12 @@ button.appearance-btn-on {
   background: linear-gradient(45deg, #4caffe 50%, #14e1fe 100%);
 }
 
+.modal {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

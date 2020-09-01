@@ -83,3 +83,7 @@ button.appearance-btn-on {
 .gold {
   background: linear-gradient(45deg, #4caffe 50%, #14e1fe 100%);
 }
+
+.modal {
+  @apply p-6 rounded-lg shadow-lg;
+}
