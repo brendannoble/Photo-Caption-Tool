@@ -14,7 +14,7 @@ const ControlsContainer = () => {
         <TextInputModule/>
         {/* TODO font selection */}
       </div>
-      <div className="flex flex-col justify-center flex-wrap md:flex-row mb-2">
+      <div className="flex flex-col justify-center md:justify-start flex-wrap md:flex-row mb-2">
         <FileUploadModule/>
         <FontSizeModule/>
         <MarginSizeModule/>

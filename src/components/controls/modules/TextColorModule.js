@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { SettingsContext } from '../../../contexts/SettingsContext';
+import ColorHistoryModule from './submodules/ColorHistorySubModule';
 
 const TextColorModule = () => {
 
@@ -26,21 +27,31 @@ const TextColorModule = () => {
     dispatch({ type: ACTIONS.SET_TEXTCOLOR, payload: color });
   }
 
+  const applyColor = (color) => {
+    setColor(color);
+    dispatch({ type: ACTIONS.SET_TEXTCOLOR, payload: color });
+  }
+
   return (
     <div className="control-well md:mx-3">
       <h2 className="control-title"><i className="fas fa-brush mr-2"></i> Text color</h2>
-      <div className="flex items-center bg-white rounded-md border-2 border-gray-400 overflow-hidden mb-4">
-      <label htmlFor="text-color-picker" className="w-10 h-10 mr-2 outline-none border-r-2 border-gray-400 overflow-hidden cursor-pointer"
-        style={{
-          backgroundColor: color
-        }}
-      ></label>
-        <input id="text-color-picker" type="color" className="hidden" onChange={handleChange} value={color}/>
-        <input className={`font-bold w-20 ${ invalid ? 'text-red-600' : null }`} placeholder={color} onChange={handleText}/>
-      </div>
-      <button className="btn w-full bg-blue-500 hover:bg-blue-400" onClick={handleSubmit}>
-        APPLY
-      </button>
+        <div className="flex flex-col md:flex-row justify-between">
+          <div className="md:mr-2">
+            <div className="flex items-center bg-white rounded-md border-2 border-gray-400 overflow-hidden mb-4">
+            <label htmlFor="text-color-picker" className="w-10 h-10 mr-2 outline-none border-r-2 border-gray-400 overflow-hidden cursor-pointer"
+              style={{
+                backgroundColor: color
+              }}
+            ></label>
+              <input id="text-color-picker" type="color" className="hidden" onChange={handleChange} value={color}/>
+              <input className={`font-bold w-20 ${ invalid ? 'text-red-600' : null }`} placeholder={color} onChange={handleText}/>
+            </div>
+            <button className="btn w-full bg-blue-500 hover:bg-blue-400" onClick={handleSubmit}>
+              APPLY
+            </button>
+          </div>
+          <ColorHistoryModule currentColor={state.textColor} applyColor={applyColor} storageKey={"textColor"}/>
+        </div>
     </div>
   )
 }

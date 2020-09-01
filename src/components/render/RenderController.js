@@ -19,7 +19,7 @@ const RenderController = () => {
       return;
     };
     if (state.isRendering) return;
-    dispatch({ type: ACTIONS.TOGGLE_ISRENDERING});
+    dispatch({ type: ACTIONS.TOGGLE_ISRENDERING });
 
     // Check browser type
 
