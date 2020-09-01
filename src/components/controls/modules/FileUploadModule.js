@@ -9,6 +9,7 @@ const FileUploadModule = () => {
 
   const onOver = (e) => {
     e.preventDefault();
+    e.dataTransfer.dropEffect = 'copy';
     setIsOver(true);
   }
 
