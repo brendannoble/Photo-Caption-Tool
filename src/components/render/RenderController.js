@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import domtoimage from 'dom-to-image';
-import FileSaver, { saveAs } from 'file-saver';
+import FileSaver from 'file-saver';
 import PreviewContainer from '../preview/PreviewContainer';
 import OutputContainer from '../output/OutputContainer';
 import RenderButton from './RenderButton';
@@ -48,14 +48,11 @@ const RenderController = () => {
     } else {
       domtoimage.toSvg(document.querySelector('#render')).then((dataUrl) => {
 
-        let blob;
-
-        fetch(dataUrl)
-        .then(res => blob = res.blob())
-        .then(FileSaver.saveAs(blob))
+        FileSaver.saveAs(dataUrl, 'image.svg');
 
         dispatch({ type: ACTIONS.SET_FINALIMAGEURL, payload: dataUrl});
         dispatch({ type: ACTIONS.TOGGLE_ISRENDERING});
+
         window.location = "#image-output";
       }).catch(err => {
         alert('An error has occurred');
@@ -82,7 +79,7 @@ const RenderController = () => {
         overflowX: 'scroll',
         width: state.naturalWidth
         }}
-        className={ !state.isRendering ? 'hidden' : null}
+        className={ !state.isRendering ? 'hidden' : null }
       >
         <Render isPreview={false}/>
       </div>
