@@ -34,7 +34,7 @@ const TextColorModule = () => {
 
   return (
     <div className="control-well md:mx-3">
-      <h2 className="control-title"><i className="fas fa-brush mr-2"></i> Text color</h2>
+      <h2 className="control-title"><i className="fas fa-brush mr-2"></i> Text Color</h2>
         <div className="flex flex-col md:flex-row justify-between">
           <div className="md:mr-2">
             <div className="flex items-center bg-white rounded-md border-2 border-gray-400 overflow-hidden mb-4">

@@ -18822,6 +18822,13 @@ button.appearance-btn-on {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
+.about-pattern {
+  background-color: #4a5568;
+  opacity: 1;
+  background-image: radial-gradient(#1a202c 1.75px, #4a5568 1.75px);
+  background-size: 35px 35px;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

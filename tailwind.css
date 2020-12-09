@@ -87,3 +87,10 @@ button.appearance-btn-on {
 .modal {
   @apply p-6 rounded-lg shadow-lg;
 }
+
+.about-pattern {
+  background-color: #4a5568;
+  opacity: 1;
+  background-image: radial-gradient(#1a202c 1.75px, #4a5568 1.75px);
+  background-size: 35px 35px;
+}

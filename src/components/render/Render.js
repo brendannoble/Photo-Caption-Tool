@@ -38,6 +38,7 @@ const Render = ({ isPreview }) => {
             textAlign: state.alignment,
             fontWeight: (state.bold) ? 'bold' : 'normal',
             fontStyle: (state.italic) ? 'italic' : 'normal',
+            fontFamily: (state.fontFamily === '') ? 'sans-serif' : `'${state.fontFamily}'`,
             textDecoration: (state.underline) ? 'underline' : 'initial',
             color: state.textColor,
           }}

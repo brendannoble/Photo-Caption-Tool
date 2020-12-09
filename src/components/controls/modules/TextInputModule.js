@@ -12,7 +12,7 @@ const TextInputModule = () => {
   }
 
   return (
-    <div className="w-full md:mx-3 control-well">
+    <div className="w-full control-well">
       <h2 className="control-title">
         <span className="text-2xl"><i className="fas fa-pencil-alt mr-2"></i> Edit text</span>
       </h2>

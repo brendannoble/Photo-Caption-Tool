@@ -11,6 +11,7 @@ const ImageModel = {
   underline: false,
   alignment: 'left',
   fontSize: 16,
+  fontFamily: '',
   marginSize: 16,
   textColor: '#000000',
   backgroundColor: '#FFFFFF',

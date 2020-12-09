@@ -3,6 +3,7 @@ export const ACTIONS = {
   SET_MARGINSIZE: 'set_marginsize',
   SET_TEXT: 'set_text',
   SET_IMAGE: 'set_image',
+  SET_FONT: 'set_font',
   SET_FILENAME: 'set_filename',
   SET_FILESELECTED: 'set_fileselected',
   SET_ALIGNMENT: 'set_alignment',
@@ -61,6 +62,10 @@ export const settingsReducer = (state, action) => {
       return {
         ...state, captionText: action.payload,
       }
+    case ACTIONS.SET_FONT:
+    return {
+      ...state, fontFamily: action.payload,
+    }
     case ACTIONS.SET_IMAGE:
       return {
         ...state, imageUrl: action.payload,

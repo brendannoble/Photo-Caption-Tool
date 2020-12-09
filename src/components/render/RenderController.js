@@ -24,7 +24,6 @@ const RenderController = () => {
     dispatch({ type: ACTIONS.TOGGLE_ISRENDERING });
 
     // Check browser type
-
     let ua = navigator.userAgent.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
     let browser;
 
@@ -46,19 +45,8 @@ const RenderController = () => {
         dispatch({ type: ACTIONS.TOGGLE_ISRENDERING});
       });
     } else {
-      domtoimage.toSvg(document.querySelector('#render')).then((dataUrl) => {
-
-        FileSaver.saveAs(dataUrl, 'image.svg');
-
-        dispatch({ type: ACTIONS.SET_FINALIMAGEURL, payload: dataUrl});
-        dispatch({ type: ACTIONS.TOGGLE_ISRENDERING});
-
-        window.location = "#image-output";
-      }).catch(err => {
-        alert('An error has occurred');
-        console.error('Oops, something went wrong!', err);
-        dispatch({ type: ACTIONS.TOGGLE_ISRENDERING});
-      });
+      dispatch({ type: ACTIONS.TOGGLE_ISRENDERING });
+      alert('Due to an issue with Safari, we are unable to support iOS at this time.');
     }
   }
 
