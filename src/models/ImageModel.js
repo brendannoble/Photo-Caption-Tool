@@ -19,6 +19,7 @@ const ImageModel = {
   captionBackground: '#FFF',
   captionText: '',
   isRendering: false,
+  quality: 0.95,
 };
 
 export default ImageModel;

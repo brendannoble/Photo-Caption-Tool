@@ -2,15 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&text=Photo%20Caption%20Tool&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&text=Photo%20Caption%20Tool&family=Roboto:wght@400;700&display=swap');
 
 *:focus {
   outline: none;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 body {
-  @apply bg-gray-100;
+  background-color: #0d1116;
   font-family: 'Roboto', sans-serif;
+  opacity: 1;
+  background-image: radial-gradient(#1a202c 1.75px, #0d1116 1.75px);
+  background-size: 35px 35px;
 }
 
 ol>li, ul>li {
@@ -26,7 +57,7 @@ ol>li, ul>li {
   right: 0;
   bottom: 0;
   z-index: 2;
-  @apply bg-gray-100;
+  @apply bg-gray-800;
 }
 
 #loading-text {
@@ -37,11 +68,11 @@ ol>li, ul>li {
 }
 
 .section-header {
-  @apply text-3xl font-bold mb-4 text-gray-700;
+  @apply text-lg font-bold mb-4 text-white;
 }
 
 .card {
-  @apply bg-white rounded-lg shadow-md; 
+  @apply bg-gray-700 text-white rounded-lg; 
 }
 
 .dark-card {
@@ -49,19 +80,19 @@ ol>li, ul>li {
 }
 
 .text-input {
-  @apply w-full bg-white p-2 rounded-md border-2 border-gray-400 transition-colors duration-150;
+  @apply w-full bg-gray-800 text-white p-2 rounded-md border-2 border-gray-500 transition-colors duration-150;
 }
 
 .control-well {
-  @apply bg-gray-200 p-2 mt-6 rounded-lg;
+  @apply bg-gray-700 pt-2 pb-4 px-4 mt-6 rounded-lg w-full;
 }
 
 .control-title {
-  @apply text-gray-700 text-lg text-center mb-2 font-bold;
+  @apply text-gray-300 text-sm text-left mb-2 font-bold;
 }
 
 .file-upload {
-  @apply block border-dashed border-2 py-6 border-gray-400 w-full cursor-pointer text-center bg-white text-gray-600 rounded-md px-3 font-bold transition-colors duration-150;
+  @apply block border-dashed border-2 py-6 border-gray-500 w-full cursor-pointer text-center bg-gray-800 text-white rounded-md px-3 font-bold transition-colors duration-150;
 }
 
 label.file-upload-over {
@@ -73,11 +104,11 @@ label.file-upload-over {
 }
 
 .appearance-btn {
-  @apply bg-white p-2 outline-none flex-grow transition-colors duration-200;
+  @apply bg-gray-600 text-white border-gray-700 p-2 outline-none flex-grow transition-colors duration-200;
 }
 
 button.appearance-btn-on {
-  @apply bg-gray-700 text-white;
+  @apply bg-blue-500 text-white;
 }
 
 .gold {

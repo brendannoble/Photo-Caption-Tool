@@ -18,6 +18,7 @@ export const ACTIONS = {
   SET_BACKGROUNDCOLOR: 'set_backgroundcolor',
   TOGGLE_ISRENDERING: 'toggle_isrendering',
   SET_FINALIMAGEURL: 'set_finalimageurl',
+  SET_QUALITY: 'set_quality'
 }
 
 export const settingsReducer = (state, action) => {
@@ -63,9 +64,9 @@ export const settingsReducer = (state, action) => {
         ...state, captionText: action.payload,
       }
     case ACTIONS.SET_FONT:
-    return {
-      ...state, fontFamily: action.payload,
-    }
+      return {
+        ...state, fontFamily: action.payload,
+      }
     case ACTIONS.SET_IMAGE:
       return {
         ...state, imageUrl: action.payload,
@@ -97,6 +98,14 @@ export const settingsReducer = (state, action) => {
     case ACTIONS.SET_FINALIMAGEURL:
       return {
         ...state, finalImageUrl: action.payload,
+      }
+    case ACTIONS.SET_QUALITY:
+      let value = action.payload
+      if (action.payload <= 0 || action.payload >= 1) {
+        value = 0.95;
+      }
+      return {
+        ...state, quality: Number(value),
       }
     default:
       return state;

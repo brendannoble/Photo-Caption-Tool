@@ -52,13 +52,13 @@ const FileUploadModule = () => {
   }
 
   return (
-    <div className="control-well md:mx-3">
+    <div className="control-well ">
       <h2 className="control-title">
         <i className="fas fa-image mr-2"></i> Select image
       </h2>
       <label 
         htmlFor="src-file"
-        className={`${ isOver ? 'file-upload-over' : '' } file-upload md:w-40 hover:bg-blue-200 hover:text-gray-700 hover:border-blue-500`}
+        className={`${ isOver ? 'file-upload-over' : '' } file-upload hover:bg-blue-500 hover:border-blue-800`}
         onDragOver={onOver}
         onDragEnter={onOver}
         onDragLeave={onLeave}

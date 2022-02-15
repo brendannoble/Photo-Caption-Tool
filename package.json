@@ -6,23 +6,22 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.4.2",
     "dom-to-image": "^2.6.0",
-    "file-saver": "^2.0.2",
-    "html2canvas": "^1.0.0-rc.7",
-    "postcss": "^7.0.32",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-responsive-modal": "^5.1.0",
-    "react-scripts": "3.4.3",
+    "file-saver": "^2.0.5",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-responsive-modal": "^5.2.6",
+    "react-scripts": "^5.0.0",
     "react-spinners": "^0.9.0",
-    "tailwindcss": "^1.7.3",
-    "uuid": "^8.3.0"
+    "tailwindcss": "^3.0.22",
+    "uuid": "^8.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "NODE_ENV=production GENERATE_SOURCEMAP=false npm run build:css && react-scripts build",
-    "build:css": "postcss tailwind.css -o src/index.css",
+    "build:css": "npx tailwindcss -o src/index.css --minify",
+    "css:watch": "tailwindcss -i tailwind.css -o ./src/index.css --watch",
     "postcss": "./node_modules/postcss/lib/postcss.js",
     "eject": "react-scripts eject"
   },
@@ -40,8 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "postcss-cli": "^7.1.1"
   }
 }

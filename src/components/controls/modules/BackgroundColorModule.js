@@ -33,18 +33,18 @@ const BackgroundColorModule = () => {
   }
 
   return (
-    <div className="control-well md:mx-3">
+    <div className="control-well ">
       <h2 className="control-title"><i className="fas fa-fill-drip mr-2"></i> Card Color</h2>
       <div className="flex flex-col md:flex-row justify-between">
         <div className="md:mr-2">
-          <div className="flex items-center bg-white rounded-md border-2 border-gray-400 overflow-hidden mb-4">
-            <label htmlFor="background-color-picker" className="w-10 h-10 mr-2 outline-none border-r-2 border-gray-400 overflow-hidden cursor-pointer"
+          <div className="flex items-center bg-gray-800 rounded-md border-2 border-gray-500 overflow-hidden mb-4">
+            <label htmlFor="background-color-picker" className="w-10 h-10 mr-2 outline-none border-r-2 border-gray-500 overflow-hidden cursor-pointer"
               style={{
                 backgroundColor: color
               }}
             ></label>
             <input id="background-color-picker" type="color" className="hidden" onChange={handleChange} value={color}/>
-            <input className={`font-bold w-20 ${ invalid ? 'text-red-600' : null }`} placeholder={color} onChange={handleText}/>
+            <input className={`font-bold w-32 bg-gray-800 ${ invalid ? 'text-red-500' : 'text-white' }`} placeholder={color} onChange={handleText}/>
           </div>
           <button className="btn w-full bg-blue-500 hover:bg-blue-400" onClick={handleSubmit}>
             APPLY
