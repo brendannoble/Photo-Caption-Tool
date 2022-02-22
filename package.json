@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "NODE_ENV=production GENERATE_SOURCEMAP=false npm run build:css && react-scripts build",
+    "build": "NODE_ENV=production GENERATE_SOURCEMAP=false react-scripts build",
     "build:css": "npx tailwindcss -o src/index.css --minify",
     "css:watch": "tailwindcss -i tailwind.css -o ./src/index.css --watch",
     "postcss": "./node_modules/postcss/lib/postcss.js",
