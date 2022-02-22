@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { SettingsContext } from '../../contexts/SettingsContext';
 import OutputPlaceholder from './OutputPlaceholder';
 import OutputImage from './OutputImage';
@@ -7,6 +7,8 @@ import SaveButton from './SaveButton';
 const OutputContainer = () => {
 
   const { state } = useContext(SettingsContext);
+
+  const [ open, setOpen ] = useState(false);
 
   return (
     <section className="flex flex-col md:h-screen overflow-y-auto w-full md:w-72 px-4 py-4 md:py-20 bg-gray-800">
@@ -23,6 +25,18 @@ const OutputContainer = () => {
             </a>
           ) : null }
         </div>
+      </div>
+      <div>
+        <h1 onClick={() => setOpen(!open)} className="cursor-pointer section-header flex justify-between items-center">How to use <i className="fa fa-chevron-down"></i> </h1>
+        { (open) ? (
+        <ol className="list-decimal text-gray-400 px-4">
+          <li>Click select or drag an image to select an image to which you want to add a caption</li>
+          <li>Input your text in the "Edit text" box</li>
+          <li>Use the controls to adjust your caption to your preference</li>
+          <li>Click "Create Captioned Image" to generate a full-resolution photo with your caption</li>
+          <li>Click the "Save Image" button to save it to your computer</li>
+        </ol>
+        ) : null}
       </div>
     </section>
   )

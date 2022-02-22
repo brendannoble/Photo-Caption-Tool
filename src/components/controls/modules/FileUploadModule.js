@@ -54,7 +54,7 @@ const FileUploadModule = () => {
   return (
     <div className="control-well ">
       <h2 className="control-title">
-        <i className="fas fa-image mr-2"></i> Select image
+        <i className="fa-solid fa-image mr-2"></i> Select image
       </h2>
       <label 
         htmlFor="src-file"
