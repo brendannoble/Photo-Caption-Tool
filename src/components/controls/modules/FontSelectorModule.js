@@ -21,7 +21,7 @@ const FontSelectorModule = () => {
     <div className="w-full control-well">
       <h2 className="control-title"><i className="fas fa-font mr-2"></i> Font Name</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" className="w-full md:w-48 mb-4 text-input focus:border-blue-500" onChange={handleChange} placeholder="Calibri"/>
+        <input type="text" className="w-full mb-4 text-input focus:border-blue-500" onChange={handleChange} placeholder="Calibri"/>
         <button className="btn w-full bg-blue-500 hover:bg-blue-400" onClick={handleSubmit}>
           APPLY
         </button>

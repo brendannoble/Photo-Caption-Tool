@@ -7,28 +7,23 @@ import AppearanceModule from './modules/AppearanceModule';
 import TextColorModule from './modules/TextColorModule';
 import BackgroundColorModule from './modules/BackgroundColorModule';
 import FontSelectorModule from './modules/FontSelectorModule';
+import QualityModule from './modules/QualityModule';
 
 const ControlsContainer = () => {
   return (
-    <>
-      <div className="flex flex-col justify-center md:justify-start flex-wrap md:flex-row mt-2">
-        <div className="flex-1 md:mx-3">
-          <TextInputModule/>
-        </div>
-        {/* TODO font selection */}
-        <div className="md:mx-3">
-          <FontSelectorModule/>
-        </div>
-      </div>
-      <div className="flex flex-col justify-center md:justify-start flex-wrap md:flex-row mb-2">
+    <div className="md:h-screen overflow-y-auto w-full md:w-72 px-4 py-4 md:py-16 bg-gray-800">
+        <TextInputModule/>
         <FileUploadModule/>
-        <FontSizeModule/>
-        <MarginSizeModule/>
         <AppearanceModule/>
+        <div className="flex gap-2">
+          <FontSizeModule/>
+          <MarginSizeModule/>
+        </div>
+        <FontSelectorModule/>
         <TextColorModule/>
         <BackgroundColorModule/>
-      </div>
-    </>
+        <QualityModule/>
+    </div>
   )
 }
 

@@ -14,9 +14,9 @@ const TextInputModule = () => {
   return (
     <div className="w-full control-well">
       <h2 className="control-title">
-        <span className="text-2xl"><i className="fas fa-pencil-alt mr-2"></i> Edit text</span>
+        <i className="fas fa-pencil-alt mr-2"></i> Edit text
       </h2>
-      <textarea rows="2" className="text-input focus:border-blue-500" onChange={handleChange} placeholder="Enter your text here"></textarea>
+      <textarea rows="2" className="text-input focus:border-blue-500 bg-gray-600" onChange={handleChange} placeholder="Enter your text here"></textarea>
     </div>
   )
 }
